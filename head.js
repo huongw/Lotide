@@ -8,7 +8,7 @@ const assertEqual = function(actual, expected) {
 
 };
 
-function head(arr){
+const head = function(arr){
   let firstItem = arr[0]
   return firstItem
 }
