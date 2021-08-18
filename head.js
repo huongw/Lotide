@@ -8,9 +8,13 @@ const assertEqual = function(actual, expected) {
 
 };
 
+// const head = function(arr){
+//   const firstItem = arr[0]
+//   return firstItem
+// }
+
 const head = function(arr){
-  let firstItem = arr[0]
-  return firstItem
+  return arr[0]
 }
 
 // TEST CODE
