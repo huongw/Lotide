@@ -21,23 +21,24 @@ const eqArrays = function(arr1, arr2) {
   return true;
 };
 
-const countLetters = function(str) {
-  const obj = {};
-    
-  for (const letter of str) {
-    if (letter in obj) {
-      // letter is in the object already
-      obj[letter] += 1;
-    } else if (letter !== " ") {
-      obj[letter] = 1;
+const letterPositions = function(sentence) {
+  const results = {};
+
+  for (let i = 0; i < sentence.length; i++) {
+    if (sentence[i] === " ") {
+      continue;
+    } else if (sentence[i] in results) {
+      results[sentence[i]].push(i);
+    } else {
+      results[sentence[i]] = [i];
     }
-    
   }
 
-  return obj;
+  return results;
 };
 
-let result = countLetters("lighthouse labs");
-console.log(result);
+let output = letterPositions("lighthouse in the house");
 
-assertArraysEqual(result, { l: 2, i: 1, g: 1, h: 2, t: 1, o: 1, u: 1, s: 2, e: 1, a: 1, b: 1 });
+console.log(output);
+
+assertArraysEqual(output.h, [ 3, 5, 15, 18 ]);
