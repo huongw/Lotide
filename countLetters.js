@@ -11,19 +11,19 @@ const assertArraysEqual = function(arr1, arr2) {
 
 };
 
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  } else {
-    for (let i = 0; i < arr1.length; i++) {
-      if (arr1[i] !== arr2[i]) {
-        return false;
-      }
-    }
-  }
+// const eqArrays = function(arr1, arr2) {
+//   if (arr1.length !== arr2.length) {
+//     return false;
+//   } else {
+//     for (let i = 0; i < arr1.length; i++) {
+//       if (arr1[i] !== arr2[i]) {
+//         return false;
+//       }
+//     }
+//   }
   
-  return true;
-};
+//   return true;
+// };
 const countLetters = function(str) {
   const obj = {};
     
@@ -40,7 +40,9 @@ const countLetters = function(str) {
   return obj;
 };
 
-let result = countLetters("lighthouse labs");
-console.log(result);
+module.exports = countLetters;
 
-assertArraysEqual(result, { l: 2, i: 1, g: 1, h: 2, t: 1, o: 1, u: 1, s: 2, e: 1, a: 1, b: 1 });
+// let result = countLetters("lighthouse labs");
+// console.log(result);
+
+// assertArraysEqual(result, { l: 2, i: 1, g: 1, h: 2, t: 1, o: 1, u: 1, s: 2, e: 1, a: 1, b: 1 });

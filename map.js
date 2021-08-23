@@ -33,10 +33,12 @@ const map = function(array, callback) {
   return results;
 }
 
-const results1 = map(words, word => word[0]);
-const strLength = map(words, word => word.length)
-const reverseWords = map(words, word => word.split("").reverse().join(""))
+module.exports = map;
 
-assertArraysEqual(results1, ["g", "c", "t", "m", "t"])
-assertArraysEqual(strLength, [6, 7, 2, 5, 3])
-assertArraysEqual(reverseWords, ["dnuorg", "lortnoc", "ot", "rojam", "mot"])
+// const results1 = map(words, word => word[0]);
+// const strLength = map(words, word => word.length)
+// const reverseWords = map(words, word => word.split("").reverse().join(""))
+
+// assertArraysEqual(results1, ["g", "c", "t", "m", "t"])
+// assertArraysEqual(strLength, [6, 7, 2, 5, 3])
+// assertArraysEqual(reverseWords, ["dnuorg", "lortnoc", "ot", "rojam", "mot"])
