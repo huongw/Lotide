@@ -1,29 +1,4 @@
 // FUNCTION IMPLEMENTATION
-const assertArraysEqual = function(arr1, arr2) {
-
-  const isTrue = eqArrays(arr1, arr2);
-
-  if (isTrue) {
-    console.log(`✅✅✅ Assertion Passed: ${arr1} === ${arr2}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${arr1} !== ${arr2}`);
-  }
-
-};
-
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  } else {
-    for (let i = 0; i < arr1.length; i++) {
-      if (arr1[i] !== arr2[i]) {
-        return false;
-      }
-    }
-  }
-  
-  return true;
-};
 
 const letterPositions = function(sentence) {
   const results = {};
@@ -43,8 +18,3 @@ const letterPositions = function(sentence) {
 
 module.exports = letterPositions;
 
-// let output = letterPositions("lighthouse in the house");
-
-// console.log(output);
-
-// assertArraysEqual(output.h, [ 3, 5, 15, 18 ]);

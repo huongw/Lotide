@@ -1,11 +1,22 @@
-const assertEqual = require("../assertEqual");
 const eqArrays = require("../eqArrays");
 
-// TEST CODE
-console.log(eqArrays([1, 2, 3], [1, 2, 3])); // => true
-console.log(eqArrays([1, 2, 3], [3, 2, 1])); // => false
+const { assert } = require("chai");
 
-console.log(eqArrays(["1", "2", "3"], ["1", "2", "3"])); // => true
-console.log(eqArrays(["1", "2", "3"], ["1", "2", 3])); // => false
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
+describe("#eqArrays", () => {
+
+  it("will return true if arrays are equal", () => {
+    const expected = true;
+    const actual = eqArrays([1, 2, 3], [1, 2, 3]);
+
+    assert.deepEqual(actual, expected);
+  });
+
+  it("will return false if arrays are not equal", () => {
+    const expected = false;
+    const actual = eqArrays([1, 5, 3], [1, 2, 3]);
+
+    assert.strictEqual(actual, expected);
+  });
+
+});

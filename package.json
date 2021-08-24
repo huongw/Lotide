@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@huongw/lotide",
   "version": "1.0.0",
-  "description": "Lotide is a library to compare arrays and objects\"",
+  "description": "This project was created and published by me as part of my learnings at Lighthouse Labs.",
   "main": "index.js",
   "directories": {
     "test": "test"
